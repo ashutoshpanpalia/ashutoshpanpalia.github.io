@@ -802,3 +802,17 @@ footer {
     }
 }
 
+/* Wider media support for panoramic videos */
+.project-card.wide-media .project-image {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+
+.project-card.wide-media video {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    border-radius: 12px;
+}
+
