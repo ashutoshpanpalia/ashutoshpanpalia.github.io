@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Robotics Engineer ">
+    <meta name="description" content="Robotics Engineer">
     <title>ASH | Robotics Engineer</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -14,16 +14,10 @@
     <!-- Navigation Bar -->
     <nav id="navbar">
         <div class="nav-container">
-            <div class="logo">
-                <span class="logo-bracket">&lt;</span>
-                <span class="logo-text">YourName</span>
-                <span class="logo-bracket">/&gt;</span>
-            </div>
             <div class="nav-links">
                 <a href="index.html" class="nav-link active">Home</a>
                 <a href="projects.html" class="nav-link">Projects</a>
-                <a href="about.html" class="nav-link">About</a>
-                <a href="resume.html" class="nav-link">Resume</a>
+                <a href="asset/Ash_resume.pdf" class="nav-link" download>Resume</a>
                 <a href="fun.html" class="nav-link">Fun</a>
             </div>
             <div class="nav-icons">
@@ -49,21 +43,19 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-content">
+            <div class="hero-image">
+                <!-- FIXED: Changed backslash to forward slash -->
+                <img src="asset/profile.JPG" alt="Ashutosh Panpalia" class="profile-photo">
+            </div>
+
             <div class="hero-text">
-                <div class="greeting" data-text="Hi, I'm">Hi, I'm</div>
+                <div class="greeting">Hi, I'm</div>
                 <h1 class="hero-name">
-                    <span class="name-char">ASHUTOSH</span>
-                    <span class="name-char">PANPALIA</span>
+                    <span class="name-char">Ashutosh 'Ash' </span>
+                    <span class="name-char">Panpalia</span>
                 </h1>
-                <h2 class="hero-title">
-                    <span class="title-word">Robotics</span>
-                    <span class="title-word">Engineer</span>
-                    
-                </h2>
                 <p class="hero-description">
-                    <span class="title-word">| 4+ years of experience | </span> 
-                    <span class="title-word">  </span>
-                    
+                    4+ years experience || Robotics Engineer at ZOHO @ Texas || MS Robotics @ University at Buffalo || Ex-Hero MotoCorp Ltd. || IIT Kanpur || DTU(DCE)
                 </p>
                 <div class="hero-buttons">
                     <a href="projects.html" class="btn btn-primary">
@@ -72,7 +64,8 @@
                             <path fill="currentColor" d="M13.025 1l-2.847 2.828 6.176 6.176h-16.354v3.992h16.354l-6.176 6.176 2.847 2.828 10.975-11z"/>
                         </svg>
                     </a>
-                    <a href="asset\Ash_resume.pdf" class="btn btn-secondary" download>
+                    <!-- FIXED: Changed backslash to forward slash -->
+                    <a href="asset/Ash_resume.pdf" class="btn btn-secondary" download>
                         <svg viewBox="0 0 24 24" width="20" height="20">
                             <path fill="currentColor" d="M12 21l-8-9h6v-12h4v12h6l-8 9zm9-1v2h-18v-2h-2v4h22v-4h-2z"/>
                         </svg>
@@ -80,247 +73,119 @@
                     </a>
                 </div>
             </div>
-            <!-- <div class="hero-visual">
-                <div class="robot-container">
-                    <div class="robot-arm">
-                        <div class="arm-segment segment-1"></div>
-                        <div class="arm-segment segment-2"></div>
-                        <div class="arm-segment segment-3"></div>
-                        <div class="robot-gripper"></div>
-                    </div>
-                    <div class="code-particles">
-                        <span class="particle">01</span>
-                        <span class="particle">RL</span>
-                        <span class="particle">AI</span>
-                        <span class="particle">{ }</span>
-                        <span class="particle">λ</span>
-                    </div>
-                </div>
-            </div> -->
         </div>
-        <div class="scroll-indicator">
+        <!-- <div class="scroll-indicator">
             <div class="mouse">
                 <div class="wheel"></div>
             </div>
             <div class="arrow-down"></div>
-        </div>
+        </div> -->
     </section>
 
     <!-- Tech Stack Section -->
-    <!-- <section class="tech-stack-section">
+    <section class="tech-stack-section">
         <div class="container">
             <h2 class="section-title">
                 <span class="title-line"></span>
-                Tech Arsenal
+                Tech Stack
                 <span class="title-line"></span>
             </h2>
-            <div class="tech-showcase">
-                <div class="tech-category">
-                    <h3>Languages</h3>
-                    <div class="tech-grid">
-                        <div class="tech-card" data-tech="python">
-                            <div class="tech-icon">
-                                <img src="assets/icons/python.svg" alt="Python">
-                            </div>
-                            <span class="tech-name">Python</span>
-                            <div class="tech-glow"></div>
-                        </div>
-                        <div class="tech-card" data-tech="cpp">
-                            <div class="tech-icon">
-                                <img src="assets/icons/cpp.svg" alt="C++">
-                            </div>
-                            <span class="tech-name">C++</span>
-                            <div class="tech-glow"></div>
-                        </div>
-                    </div>
+
+            <div class="tech-cloud">
+                <!-- Core -->
+                <div class="tech-item">
+                    <img src="assets/icons/python.svg" alt="Python">
+                    <span>Python</span>
+                </div>
+                <div class="tech-item">
+                    <img src="assets/icons/linux.svg" alt="Linux">
+                    <span>Linux</span>
+                </div>
+                <div class="tech-item">
+                    <img src="assets/icons/git.svg" alt="Git">
+                    <span>Git</span>
                 </div>
 
-                <div class="tech-category">
-                    <h3>Robotics & Simulation</h3>
-                    <div class="tech-grid">
-                        <div class="tech-card" data-tech="ros">
-                            <div class="tech-icon">
-                                <img src="assets/icons/ros2.svg" alt="ROS2">
-                            </div>
-                            <span class="tech-name">ROS2</span>
-                            <div class="tech-glow"></div>
-                        </div>
-                        <div class="tech-card" data-tech="isaac">
-                            <div class="tech-icon">
-                                <img src="assets/icons/isaac.svg" alt="Isaac">
-                            </div>
-                            <span class="tech-name">Isaac Sim/Lab</span>
-                            <div class="tech-glow"></div>
-                        </div>
-                        <div class="tech-card" data-tech="pybullet">
-                            <div class="tech-icon">
-                                <img src="assets/icons/pybullet.svg" alt="PyBullet">
-                            </div>
-                            <span class="tech-name">PyBullet</span>
-                            <div class="tech-glow"></div>
-                        </div>
-                    </div>
+                <!-- Robotics -->
+                <div class="tech-item">
+                    <img src="assets/icons/ros2.svg" alt="ROS2">
+                    <span>ROS / ROS 2</span>
+                </div>
+                <div class="tech-item">
+                    <img src="assets/icons/nav2.svg" alt="Nav2">
+                    <span>Nav2</span>
+                </div>
+                <div class="tech-item">
+                    <img src="assets/icons/slam.svg" alt="SLAM">
+                    <span>SLAM</span>
+                </div>
+                <div class="tech-item">
+                    <img src="assets/icons/rviz.svg" alt="Rviz">
+                    <span>Rviz</span>
+                </div>
+                <div class="tech-item">
+                    <img src="assets/icons/gazebo.svg" alt="Gazebo">
+                    <span>Gazebo</span>
                 </div>
 
-                <div class="tech-category">
-                    <h3>AI & ML Frameworks</h3>
-                    <div class="tech-grid">
-                        <div class="tech-card" data-tech="pytorch">
-                            <div class="tech-icon">
-                                <img src="assets/icons/pytorch.svg" alt="PyTorch">
-                            </div>
-                            <span class="tech-name">PyTorch</span>
-                            <div class="tech-glow"></div>
-                        </div>
-                        <div class="tech-card" data-tech="tensorflow">
-                            <div class="tech-icon">
-                                <img src="assets/icons/tensorflow.svg" alt="TensorFlow">
-                            </div>
-                            <span class="tech-name">TensorFlow</span>
-                            <div class="tech-glow"></div>
-                        </div>
-                    </div>
+                <!-- Simulation & Learning -->
+                <div class="tech-item">
+                    <img src="assets/icons/isaac.svg" alt="Isaac">
+                    <span>Isaac Sim</span>
+                </div>
+                <div class="tech-item">
+                    <img src="assets/icons/isaac.svg" alt="Isaac Lab">
+                    <span>Isaac Lab</span>
+                </div>
+                <div class="tech-item">
+                    <img src="assets/icons/pybullet.svg" alt="PyBullet">
+                    <span>PyBullet</span>
+                </div>
+                <div class="tech-item">
+                    <img src="assets/icons/pytorch.svg" alt="PyTorch">
+                    <span>PyTorch</span>
                 </div>
 
-                <div class="tech-category">
-                    <h3>Tools & Platforms</h3>
-                    <div class="tech-grid">
-                        <div class="tech-card" data-tech="linux">
-                            <div class="tech-icon">
-                                <img src="assets/icons/linux.svg" alt="Linux">
-                            </div>
-                            <span class="tech-name">Linux</span>
-                            <div class="tech-glow"></div>
-                        </div>
-                        <div class="tech-card" data-tech="git">
-                            <div class="tech-icon">
-                                <img src="assets/icons/git.svg" alt="Git">
-                            </div>
-                            <span class="tech-name">Git</span>
-                            <div class="tech-glow"></div>
-                        </div>
-                        <div class="tech-card" data-tech="nvidia">
-                            <div class="tech-icon">
-                                <img src="assets/icons/nvidia.svg" alt="NVIDIA">
-                            </div>
-                            <span class="tech-name">NVIDIA Tools</span>
-                            <div class="tech-glow"></div>
-                        </div>
-                    </div>
+                <!-- Perception -->
+                <div class="tech-item">
+                    <img src="assets/icons/opencv.svg" alt="OpenCV">
+                    <span>OpenCV</span>
+                </div>
+                <div class="tech-item">
+                    <img src="assets/icons/camera.svg" alt="3D Cameras">
+                    <span>3D Cameras</span>
+                </div>
+                <div class="tech-item">
+                    <img src="assets/icons/camera.svg" alt="High-Speed Cameras">
+                    <span>High-Speed Cameras</span>
+                </div>
+
+                <!-- Sensors -->
+                <div class="tech-item">
+                    <img src="assets/icons/lidar.svg" alt="LiDAR">
+                    <span>LiDAR</span>
+                </div>
+                <div class="tech-item">
+                    <img src="assets/icons/imu.svg" alt="IMU">
+                    <span>IMU</span>
+                </div>
+                <div class="tech-item">
+                    <img src="assets/icons/gps.svg" alt="GPS">
+                    <span>GPS</span>
+                </div>
+                <div class="tech-item">
+                    <img src="assets/icons/sensor.svg" alt="Tactile Sensors">
+                    <span>Tactile Sensors</span>
+                </div>
+
+                <!-- Hardware -->
+                <div class="tech-item">
+                    <img src="assets/icons/robot-arm.svg" alt="Robotic Arms">
+                    <span>Robotic Arms</span>
                 </div>
             </div>
         </div>
-    </section> -->
-
-
-    <!-- Tech Stack Section -->
-<section class="tech-stack-section">
-    <div class="container">
-        <h2 class="section-title">
-            <span class="title-line"></span>
-            Tech Stack
-            <span class="title-line"></span>
-        </h2>
-
-        <div class="tech-cloud">
-
-            <!-- Core -->
-            <div class="tech-item">
-                <img src="assets/icons/python.svg" alt="Python">
-                <span>Python</span>
-            </div>
-            <div class="tech-item">
-                <img src="assets/icons/linux.svg" alt="Linux">
-                <span>Linux</span>
-            </div>
-            <div class="tech-item">
-                <img src="assets/icons/git.svg" alt="Git">
-                <span>Git</span>
-            </div>
-
-            <!-- Robotics -->
-            <div class="tech-item">
-                <img src="assets/icons/ros2.svg" alt="ROS2">
-                <span>ROS / ROS 2</span>
-            </div>
-            <div class="tech-item">
-                <img src="assets/icons/nav2.svg" alt="Nav2">
-                <span>Nav2</span>
-            </div>
-            <div class="tech-item">
-                <img src="assets/icons/slam.svg" alt="SLAM">
-                <span>SLAM</span>
-            </div>
-            <div class="tech-item">
-                <img src="assets/icons/rviz.svg" alt="Rviz">
-                <span>Rviz</span>
-            </div>
-            <div class="tech-item">
-                <img src="assets/icons/gazebo.svg" alt="Gazebo">
-                <span>Gazebo</span>
-            </div>
-
-            <!-- Simulation & Learning -->
-            <div class="tech-item">
-                <img src="assets/icons/isaac.svg" alt="Isaac">
-                <span>Isaac Sim</span>
-            </div>
-            <div class="tech-item">
-                <img src="assets/icons/isaac.svg" alt="Isaac Lab">
-                <span>Isaac Lab</span>
-            </div>
-            <div class="tech-item">
-                <img src="assets/icons/pybullet.svg" alt="PyBullet">
-                <span>PyBullet</span>
-            </div>
-            <div class="tech-item">
-                <img src="assets/icons/pytorch.svg" alt="PyTorch">
-                <span>PyTorch</span>
-            </div>
-
-            <!-- Perception -->
-            <div class="tech-item">
-                <img src="assets/icons/opencv.svg" alt="OpenCV">
-                <span>OpenCV</span>
-            </div>
-            <div class="tech-item">
-                <img src="assets/icons/camera.svg" alt="3D Cameras">
-                <span>3D Cameras</span>
-            </div>
-            <div class="tech-item">
-                <img src="assets/icons/camera.svg" alt="High-Speed Cameras">
-                <span>High-Speed Cameras</span>
-            </div>
-
-            <!-- Sensors -->
-            <div class="tech-item">
-                <img src="assets/icons/lidar.svg" alt="LiDAR">
-                <span>LiDAR</span>
-            </div>
-            <div class="tech-item">
-                <img src="assets/icons/imu.svg" alt="IMU">
-                <span>IMU</span>
-            </div>
-            <div class="tech-item">
-                <img src="assets/icons/gps.svg" alt="GPS">
-                <span>GPS</span>
-            </div>
-            <div class="tech-item">
-                <img src="assets/icons/sensor.svg" alt="Tactile Sensors">
-                <span>Tactile Sensors</span>
-            </div>
-
-            <!-- Hardware -->
-            <div class="tech-item">
-                <img src="assets/icons/robot-arm.svg" alt="Robotic Arms">
-                <span>Robotic Arms</span>
-            </div>
-
-        </div>
-    </div>
-</section>
-
-
+    </section>
 
     <!-- Featured Projects Teaser -->
     <section class="featured-preview">
@@ -411,7 +276,7 @@
     <footer>
         <div class="footer-content">
             <div class="footer-left">
-                <p>&copy; 2025 Your Name. Engineered with passion.</p>
+                <p>&copy; 2025 Ashutosh Panpalia. Engineered with passion.</p>
             </div>
             <div class="footer-right">
                 <a href="https://github.com/ashutoshpanpalia" target="_blank">GitHub</a>
