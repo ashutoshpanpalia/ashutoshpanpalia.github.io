@@ -155,8 +155,6 @@ body {
 .profile-photo {
     width: 360px;
     height: 420px;
-    border-radius: 70%;
-
     border: 4px solid var(--primary);
     box-shadow: 0 8px 24px rgba(59, 130, 246, 0.3);
     display: block;
@@ -329,45 +327,74 @@ body {
 }
 
 /* ===================================
-   Tech Stack Section - Simplified Pills
+   Tech Stack Section
    =================================== */
+
 .tech-stack-section {
-    padding: 4rem 2rem;
-    background: white;
+  padding: 4rem 2rem;
+  background: #ffffff;
 }
 
+/* Grid gives better control than flex */
 .tech-cloud {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.8rem;
-    justify-content: center;
-    margin-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+  gap: 1rem;
+  margin-top: 2.5rem;
+  align-items: stretch;
 }
 
+/* Base tech item */
 .tech-item {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 0.6rem 1rem;
-    border-radius: 20px;
-    background: var(--gray-100);
-    border: 1px solid var(--gray-200);
-    font-size: 0.9rem;
-    font-weight: 500;
-    transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  padding: 0.6rem 1rem;
+  border-radius: 999px;
+  background: var(--gray-100);
+  border: 1px solid var(--gray-200);
+  font-size: 0.85rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  white-space: nowrap;
 }
 
+/* Hover effect */
 .tech-item:hover {
-    background: var(--primary);
-    color: white;
-    border-color: var(--primary);
-    transform: translateY(-2px);
+  background: var(--primary);
+  color: #fff;
+  border-color: var(--primary);
+  transform: translateY(-2px);
 }
 
-.tech-item img {
-    width: 20px;
-    height: 20px;
+/* -----------------------------------
+   Icon-based items (bigger & first)
+   ----------------------------------- */
+.tech-item:has(img) {
+  order: 1;
+  grid-column: span 2;
+  flex-direction: column;
+  padding: 1.2rem;
+  border-radius: 16px;
+  font-size: 0.95rem;
 }
+
+/* Icon size */
+.tech-item img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+}
+
+/* -----------------------------------
+   Text-only pills
+   ----------------------------------- */
+.tech-item:not(:has(img)) {
+  order: 2;
+  opacity: 0.95;
+}
+
 
 /* ===================================
    Featured Projects
