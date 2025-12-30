@@ -800,9 +800,9 @@ footer {
         font-size: 2rem;
     }
 
-    .projects-grid {
+    /* .projects-grid {
         grid-template-columns: 1fr;
-    }
+    } */
 
     .footer-content {
         flex-direction: column;
@@ -811,36 +811,26 @@ footer {
     }
 
 
-        .projects-preview-grid {
-        grid-template-columns: 1fr;
-        max-width: 400px;
-        margin: 0 auto 3rem auto;
-    }
-    
-    /* Fix Projects Page Grid */
+    /* FIX: Center the entire grid container */
+    .projects-preview-grid,
     .projects-grid {
         grid-template-columns: 1fr;
         max-width: 400px;
-        margin: 0 auto;
+        margin: 0 auto 3rem auto;
+        padding: 0 1rem; /* Add padding for breathing room */
     }
     
-    /* Ensure cards take full width */
+    /* FIX: Make cards actually centered */
     .preview-card,
     .project-card {
         width: 100%;
-        max-width: 100%;
+        margin: 0; /* Remove any margin */
+        justify-self: center; /* Center within grid cell */
     }
     
-    /* Fix Tech Stack on Mobile */
-    .tech-cloud {
-        grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
-        justify-items: center;
-    }
-    
-    /* Icon-based tech items on mobile */
-    .tech-item:has(img) {
-        grid-column: span 1;
-        min-width: 100%;
+    /* FIX: Ensure container has proper padding */
+    .container {
+        padding: 0 1rem; /* Equal padding on both sides */
     }
 }
 
