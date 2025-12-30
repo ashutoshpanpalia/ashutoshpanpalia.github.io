@@ -809,6 +809,39 @@ footer {
         gap: 1rem;
         text-align: center;
     }
+
+
+        .projects-preview-grid {
+        grid-template-columns: 1fr;
+        max-width: 400px;
+        margin: 0 auto 3rem auto;
+    }
+    
+    /* Fix Projects Page Grid */
+    .projects-grid {
+        grid-template-columns: 1fr;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+    
+    /* Ensure cards take full width */
+    .preview-card,
+    .project-card {
+        width: 100%;
+        max-width: 100%;
+    }
+    
+    /* Fix Tech Stack on Mobile */
+    .tech-cloud {
+        grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
+        justify-items: center;
+    }
+    
+    /* Icon-based tech items on mobile */
+    .tech-item:has(img) {
+        grid-column: span 1;
+        min-width: 100%;
+    }
 }
 
 @media (max-width: 480px) {
@@ -816,5 +849,15 @@ footer {
         order: 3;
         width: 100%;
         justify-content: center;
+    }
+
+    .projects-preview-grid,
+    .projects-grid {
+        max-width: 100%;
+        padding: 0;
+    }
+    
+    .container {
+        padding: 0 1rem;
     }
 }
