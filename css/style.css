@@ -565,6 +565,13 @@ body {
     transition: all 0.3s ease;
 }
 
+/* Prevent single project from stretching full width */
+.projects-grid > .project-card {
+    max-width: 420px;
+    justify-self: center;
+}
+
+
 .project-card:hover {
     transform: translateY(-4px);
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
