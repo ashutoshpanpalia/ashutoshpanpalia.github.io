@@ -35,42 +35,52 @@ window.addEventListener('scroll', () => {
 // ===================================
 // Modal for Project Images
 // ===================================
-function openModal(imageSrc) {
+function openModal(src) {
     const modal = document.getElementById('modal');
     const modalImg = document.getElementById('modal-img');
-    
+    const modalVideo = document.getElementById('modal-video');
+    const isVideo = src.endsWith('.mp4') || src.endsWith('.webm');
+
+    if (isVideo) {
+        modalImg.style.display = 'none';
+        modalVideo.style.display = 'block';
+        modalVideo.src = src;
+        modalVideo.play();
+    } else {
+        modalVideo.style.display = 'none';
+        modalImg.style.display = 'block';
+        modalImg.src = src;
+    }
     modal.style.display = 'block';
-    modalImg.src = imageSrc;
     document.body.style.overflow = 'hidden';
+}
+
+function closeModal() {
+    const modal = document.getElementById('modal');
+    const modalVideo = document.getElementById('modal-video');
+    if (modalVideo) { modalVideo.pause(); modalVideo.src = ''; }
+    modal.style.display = 'none';
+    document.body.style.overflow = 'auto';
 }
 
 // Close modal
 document.addEventListener('DOMContentLoaded', () => {
     const modal = document.getElementById('modal');
     const modalClose = document.querySelector('.modal-close');
-    
+
     if (modalClose) {
-        modalClose.addEventListener('click', () => {
-            modal.style.display = 'none';
-            document.body.style.overflow = 'auto';
-        });
+        modalClose.addEventListener('click', closeModal);
     }
-    
+
     if (modal) {
         modal.addEventListener('click', (e) => {
-            if (e.target === modal) {
-                modal.style.display = 'none';
-                document.body.style.overflow = 'auto';
-            }
+            if (e.target === modal) closeModal();
         });
     }
-    
+
     // Close with Escape key
     document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape' && modal.style.display === 'block') {
-            modal.style.display = 'none';
-            document.body.style.overflow = 'auto';
-        }
+        if (e.key === 'Escape' && modal && modal.style.display === 'block') closeModal();
     });
 });
 

@@ -16,7 +16,7 @@
                 <a href="index.html" class="nav-link">Home</a>
                 <a href="projects.html" class="nav-link active">Projects</a>
                 <a href="asset/Ash_resume.pdf" class="nav-link" download>Resume</a>
-                <a href="fun.html" class="nav-link">Fun</a>
+                <a href="fun.html" class="nav-link">Mini Projects</a>
             </div>
             <div class="nav-icons">
                 <a href="https://www.linkedin.com/in/ashutosh-panpalia/" target="_blank" class="social-icon">
@@ -117,6 +117,74 @@
                     </div>
                 </div>
             </div>
+
+            <!-- Foundation Pose -->
+            <div class="project-card">
+                <div class="project-image" onclick="openModal('asset/gifs/2026/foundation_pose_and_pd_velocity_control.mp4')">
+                    <video src="asset/gifs/2026/foundation_pose_and_pd_velocity_control.mp4" autoplay muted loop playsinline></video>
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title">6DoF Object Pose Estimation with FoundationPose (NVIDIA)</h3>
+                    <p class="project-description">
+                        Implemented NVIDIA's FoundationPose for model-based 6DoF pose estimation of CAD objects using an Intel RealSense D405 camera. Integrated the pose output with a PD velocity controller on a Ufactory robot arm to enable pose-driven manipulation — tracking object position and orientation in real time to guide end-effector control.
+                    </p>
+                    <div class="project-tags">
+                        <span class="tag">FoundationPose</span>
+                        <span class="tag">6DoF Pose Estimation</span>
+                        <span class="tag">NVIDIA</span>
+                        <span class="tag">Intel RealSense D405</span>
+                        <span class="tag">Computer Vision</span>
+                        <span class="tag">PD Velocity Control</span>
+                        <span class="tag">Robot Manipulation</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SyncMfg Synthetic Dataset Analysis -->
+            <div class="project-card">
+                <div class="project-image" onclick="openModal('asset/gifs/2026/real_vs_hybrid_dataset_object_detection.mp4')">
+                    <video src="asset/gifs/2026/real_vs_hybrid_dataset_object_detection.mp4" autoplay muted loop playsinline></video>
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title">Synthetic vs Real vs Hybrid Datasets for CAD Object Detection (SyncMfg)</h3>
+                    <p class="project-description">
+                        Conducted a systematic comparative study on dataset composition for manufacturing object detection. Generated fully synthetic training data in Blender (varied backgrounds and materials) and compared it against a 100% real image dataset and hybrid mixes at 2%, 5%, 10%, 15%, 25%, and 50% real data ratios. Key finding: a 5% hybrid dataset achieves optimal detection performance — minimizing annotation cost while retaining real-world robustness for CAD-model-based industrial object detection.
+                    </p>
+                    <div class="project-tags">
+                        <span class="tag">Synthetic Data</span>
+                        <span class="tag">Blender</span>
+                        <span class="tag">Object Detection</span>
+                        <span class="tag">YOLO</span>
+                        <span class="tag">Dataset Generation</span>
+                        <span class="tag">Sim-to-Real</span>
+                        <span class="tag">Computer Vision</span>
+                        <span class="tag">Manufacturing</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Visual Servoing -->
+            <div class="project-card">
+                <div class="project-image" onclick="openModal('asset/gifs/2026/visual_servoing.mp4')">
+                    <video src="asset/gifs/2026/visual_servoing.mp4" autoplay muted loop playsinline></video>
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title">Visual Servoing with Ufactory Arm and AprilTag Tracking</h3>
+                    <p class="project-description">
+                        Implemented image-based visual servoing on a Ufactory robot arm with an Intel RealSense D405 camera mounted on the end-effector. Used AprilTag detection as the visual feature source and a velocity controller to continuously minimize pose error between the detected tag and the target frame — enabling closed-loop, camera-guided manipulation without predefined trajectories.
+                    </p>
+                    <div class="project-tags">
+                        <span class="tag">Visual Servoing</span>
+                        <span class="tag">Ufactory</span>
+                        <span class="tag">Intel RealSense D405</span>
+                        <span class="tag">AprilTag</span>
+                        <span class="tag">Velocity Control</span>
+                        <span class="tag">Closed-Loop Control</span>
+                        <span class="tag">Robot Manipulation</span>
+                    </div>
+                </div>
+            </div>
+
 </section>
 
 
@@ -568,6 +636,7 @@
     <div id="modal" class="modal">
         <span class="modal-close">&times;</span>
         <img class="modal-content" id="modal-img">
+        <video class="modal-content" id="modal-video" controls autoplay muted loop playsinline style="display:none"></video>
     </div>
 
     <footer>

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fun | Ash</title>
+    <title>Mini Projects | Ash</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -15,7 +15,7 @@
                 <a href="index.html" class="nav-link">Home</a>
                 <a href="projects.html" class="nav-link">Projects</a>
                 <a href="asset/Ash_resume.pdf" class="nav-link" download>Resume</a>
-                <a href="fun.html" class="nav-link active">Fun</a>
+                <a href="fun.html" class="nav-link active">Mini Projects</a>
             </div>
             <div class="nav-icons">
                 <a href="https://www.linkedin.com/in/ashutosh-panpalia/" target="_blank" class="social-icon">
@@ -39,18 +39,141 @@
 
     <section class="page-header">
         <div class="container">
-            <h1 class="page-title"><span class="title-number">04.</span> Under construction</h1>
+            <h1 class="page-title">Mini Projects</h1>
+            <p class="page-subtitle">Experiments, explorations, and quick implementations</p>
         </div>
     </section>
 
+    <section class="projects-section">
+        <div class="container">
+            <div class="projects-grid">
+
+                <div class="project-card">
+                    <div class="project-image" onclick="openModal('asset/gifs/mini_projects/orb_slam_demo.mp4')">
+                        <video src="asset/gifs/mini_projects/orb_slam_demo.mp4" autoplay muted loop playsinline></video>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">ORB-SLAM Implementation</h3>
+                        <p class="project-description">
+                            Ran and tested ORB-SLAM for real-time monocular simultaneous localization and mapping. Explored feature extraction, map point management, and loop closure on live camera feed.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">ORB-SLAM</span>
+                            <span class="tag">SLAM</span>
+                            <span class="tag">Computer Vision</span>
+                            <span class="tag">Localization</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image" onclick="openModal('asset/gifs/mini_projects/intel_vs_kinect.mp4')">
+                        <video src="asset/gifs/mini_projects/intel_vs_kinect.mp4" autoplay muted loop playsinline></video>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Intel RealSense vs Kinect Depth Comparison</h3>
+                        <p class="project-description">
+                            Side-by-side depth quality comparison between Intel RealSense and Microsoft Kinect. Evaluated depth accuracy, noise characteristics, and range performance for robotics perception use cases.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">Intel RealSense</span>
+                            <span class="tag">Kinect</span>
+                            <span class="tag">Depth Sensing</span>
+                            <span class="tag">Perception</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image" onclick="openModal('asset/gifs/mini_projects/rl_learning_to_push.gif')">
+                        <img src="asset/gifs/mini_projects/rl_learning_to_push.gif" alt="RL Learning to Push">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">RL Agent Learning to Push Objects</h3>
+                        <p class="project-description">
+                            Trained a reinforcement learning agent to push objects to a target location in simulation. Explored reward shaping and policy convergence for contact-rich manipulation tasks.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">Reinforcement Learning</span>
+                            <span class="tag">Manipulation</span>
+                            <span class="tag">Simulation</span>
+                            <span class="tag">Reward Shaping</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image" onclick="openModal('asset/gifs/mini_projects/isaac_sim_04_rl_agent_controling_inverted_pendulum.gif')">
+                        <img src="asset/gifs/mini_projects/isaac_sim_04_rl_agent_controling_inverted_pendulum.gif" alt="RL Inverted Pendulum Isaac Sim">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">RL Inverted Pendulum in Isaac Sim</h3>
+                        <p class="project-description">
+                            Implemented and trained an RL controller for the classic inverted pendulum balancing task inside NVIDIA Isaac Sim. Used as an early test of the Isaac Sim RL workflow and environment setup.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">Reinforcement Learning</span>
+                            <span class="tag">Isaac Sim</span>
+                            <span class="tag">NVIDIA</span>
+                            <span class="tag">Control</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image" onclick="openModal('asset/gifs/mini_projects/using_synthetic_data_for_custom_yolo_model_training.png')">
+                        <img src="asset/gifs/mini_projects/using_synthetic_data_for_custom_yolo_model_training.png" alt="Synthetic Data YOLO Training">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Custom YOLO Model Training with Synthetic Data</h3>
+                        <p class="project-description">
+                            Trained a custom YOLO object detection model using synthetically generated images. Explored pipeline from synthetic scene generation to model training and validation.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">YOLO</span>
+                            <span class="tag">Synthetic Data</span>
+                            <span class="tag">Object Detection</span>
+                            <span class="tag">Computer Vision</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image" onclick="openModal('asset/gifs/mini_projects/slo_mo_metal_chip_formation_experiment.gif')">
+                        <img src="asset/gifs/mini_projects/slo_mo_metal_chip_formation_experiment.gif" alt="Slow-Mo Metal Chip Formation">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Slow-Motion Metal Chip Formation Experiment</h3>
+                        <p class="project-description">
+                            High-speed camera capture of metal chip formation during machining. Recorded to study material deformation and cutting dynamics at the microscale.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">Manufacturing</span>
+                            <span class="tag">High-Speed Imaging</span>
+                            <span class="tag">Machining</span>
+                            <span class="tag">Material Science</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal -->
+    <div id="modal" class="modal">
+        <span class="modal-close">&times;</span>
+        <img class="modal-content" id="modal-img">
+        <video class="modal-content" id="modal-video" controls autoplay muted loop playsinline style="display:none"></video>
+    </div>
 
     <footer>
         <div class="footer-content">
-            <div class="footer-left"><p>&copy; 2025 Your Name. Engineered with passion.</p></div>
+            <div class="footer-left"><p>&copy; 2025 Ashutosh Panpalia. Engineered with passion.</p></div>
             <div class="footer-right">
-                <a href="https://github.com/yourusername" target="_blank">GitHub</a>
-                <a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a>
-                <a href="mailto:your.email@example.com">Email</a>
+                <a href="https://github.com/ashutoshpanpalia" target="_blank">GitHub</a>
+                <a href="https://www.linkedin.com/in/ashutosh-panpalia/" target="_blank">LinkedIn</a>
+                <a href="mailto:ashutoshpanpalia@gmail.com">Email</a>
             </div>
         </div>
     </footer>
