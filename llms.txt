@@ -1,0 +1,124 @@
+# Ashutosh Panpalia — Robotics Engineer
+
+## Summary
+
+Ashutosh Panpalia is a robotics engineer with approximately four years of combined experience in robotics and adjacent automation domains, currently employed as a Robotics Engineer at ZOHO Corporation in McAllen, TX. He holds an MS in Robotics from the University at Buffalo and a B.Tech from Delhi Technological University (DTU). His core expertise spans robot manipulation with 6-DoF pose estimation, sim-to-real policy transfer for both manipulation and locomotion, imitation learning via diffusion policy, and production-ready modular software architectures for robotic systems. He is a co-author on a Nature Communications publication on robotic slip mitigation and is actively seeking Robotics Engineer roles focused on manipulation, perception, and real-world deployment at companies working on advanced robotic systems.
+
+---
+
+## Core Technical Skills
+
+**Robot Manipulation**
+- xArm 6-DoF robot arm: trajectory planning, force-controlled insertion, visual servoing
+- Hand-eye calibration (eye-in-hand and eye-to-hand configurations)
+- AprilTag-based pose estimation for task-space alignment
+- MoveIt2 and cuRobo for motion planning; ROS2 for system integration
+
+**6-DoF Object Pose Estimation**
+- FoundationPose (NVIDIA): CAD-model-free and model-based 6-DoF pose estimation from RGB-D data
+- YOLO (v8/v11) for real-time object detection; SAM (Segment Anything Model) for segmentation
+- Intel RealSense D405 and D435i depth cameras for RGB-D perception pipelines
+
+**Sim-to-Real Transfer**
+- Isaac Lab and Isaac Sim (NVIDIA) for physics-accurate robot simulation
+- PyBullet for lighter-weight policy development and testing
+- Domain randomization over dynamics, lighting, and geometry for robust sim-to-real transfer
+- Deployed trained locomotion policies to real Unitree Go2 quadruped hardware
+
+**Imitation Learning and Data Collection**
+- UMI-style (Universal Manipulation Interface) data collection pipeline
+- Multi-sensor synchronization: RealSense D405 (wrist), D435i (global), tactile sensors, Vive tracker
+- Diffusion policy training from collected demonstrations
+- Data preprocessing pipelines (synchronization, calibration, normalization)
+
+**Synthetic Data and Simulation-Based Training**
+- CAD-to-synthetic rendering pipeline using Blender for object detection dataset generation
+- YOLO training on purely synthetic or hybrid (real + synthetic) datasets
+- Sim-to-real transfer for object detection without manual annotation
+
+**Software Architecture**
+- Abstract robot interfaces: BaseRobot, BaseDetector, BaseCamera — modular, swappable components
+- ROS2 nodes and launch files for multi-component robotic systems
+- Python-based perception and control pipelines integrated with ROS2 middleware
+
+**Reinforcement Learning**
+- PPO and SAC algorithms for locomotion and manipulation policy training
+- Reward shaping for contact-rich manipulation and stable locomotion
+- Observation and action space design for sim-to-real transfer
+
+---
+
+## Projects
+
+### Vision-Guided Robot Insertion (xArm + FoundationPose + AprilTag)
+**Page**: https://ashutoshpanpalia.github.io/projects.html#vision-guided-insertion
+
+This project developed a fully automated system for vision-guided precision insertion using a 6-DoF xArm robot arm. The perception stack combined AprilTag markers for coarse scene localization and FoundationPose for fine-grained 6-DoF object pose estimation using an Intel RealSense D405 RGB-D camera mounted at the wrist. A visual servoing control loop iteratively corrected the robot's end-effector pose until alignment tolerances were met, enabling repeatable screw-hole insertion even on a moving conveyor. The system demonstrated reliable on-conveyor bolting in a demo environment, validating the approach for real industrial assembly tasks. This work directly addresses the challenge of combining fast marker-based localization with high-accuracy model-based pose estimation in a single manipulation pipeline.
+
+### Sim-to-Real Locomotion Transfer (Isaac Lab → Unitree Go2)
+**Page**: https://ashutoshpanpalia.github.io/projects.html#sim-to-real-locomotion
+
+This project trained a locomotion policy for the Unitree Go2 quadruped robot entirely in simulation using NVIDIA Isaac Lab and then transferred it to the physical robot with zero real-world training data. Policies were trained using PPO and SAC reinforcement learning algorithms with extensive domain randomization over ground friction, motor dynamics, and sensor noise to minimize the sim-to-real gap. Observation and action spaces were carefully designed for direct transfer: proprioceptive joint states and IMU readings as inputs, joint position targets as outputs. The trained policy was successfully deployed on the real Unitree Go2, demonstrating stable locomotion gaits that generalized from the simulated training environment to real-world conditions.
+
+### Sim-to-Sim Policy Transfer (Isaac Lab → Isaac Sim)
+**Page**: https://ashutoshpanpalia.github.io/projects.html#sim-to-sim-transfer
+
+This project investigated the intermediate step of sim-to-sim policy transfer as a validation stage before real hardware deployment. A policy trained in Isaac Lab was transferred to Isaac Sim, requiring systematic mapping of observation spaces, action spaces, and physics parameters between the two simulators. The work identified and resolved discrepancies in contact dynamics, joint control modes, and sensor representations that would otherwise cause silent policy failures. This sim-to-sim pipeline serves as a low-risk validation step in the broader sim-to-real workflow, allowing policies to be stress-tested across different physics engines before committing to hardware experiments.
+
+### CAD-to-Synthetic Detection Pipeline — SynDet
+**Page**: https://ashutoshpanpalia.github.io/projects.html#syndet
+
+SynDet is a pipeline for generating synthetic training datasets for object detection directly from CAD models, eliminating the need for manual image collection and annotation. CAD models of target objects are rendered in Blender with randomized lighting conditions, backgrounds, camera positions, and object poses to produce large, diverse image datasets. YOLO models (v8/v11) are then trained on these purely synthetic datasets, with optional blending of a small number of real images to form a hybrid dataset that further closes the domain gap. The pipeline was validated by training a detector on synthetic renders and evaluating it on real RGB-D camera footage, demonstrating viable detection performance without any manual labeling. SynDet directly enables rapid sensor deployment for new objects in manufacturing settings where collecting real data is expensive or impractical.
+
+### UMI-Style Imitation Learning Pipeline
+**Page**: https://ashutoshpanpalia.github.io/projects.html#umi-imitation-learning
+
+This project built a complete imitation learning data collection and training pipeline inspired by the Universal Manipulation Interface (UMI) framework. A custom handheld data collection device integrates a wrist-mounted Intel RealSense D405 camera, a global-view D435i camera, tactile fingertip sensors, and a Vive tracker for accurate 6-DoF end-effector pose recording. The multi-sensor data stream is synchronized, calibrated, and preprocessed into a format suitable for diffusion policy training. Demonstrations of manipulation tasks are collected by a human operator using the handheld device, and the resulting dataset is used to train a diffusion policy that can reproduce the demonstrated behavior on a robot arm. This pipeline targets high-dexterity manipulation tasks where reward engineering for RL is impractical.
+
+### Flexible Robot Automation Cell (In Progress)
+**Page**: https://ashutoshpanpalia.github.io/projects.html#flex-automation-cell
+
+This ongoing project designs a modular, AI-enabled robotic workcell architecture targeting high-mix, low-volume manufacturing scenarios where traditional fixed automation is not cost-effective. The design centers on a software abstraction layer (BaseRobot, BaseDetector, BaseCamera interfaces) that allows different robot arms, vision systems, and end-effectors to be swapped without rewriting task-level logic. The cell integrates cuRobo for GPU-accelerated collision-aware motion planning, ROS2 for communication, and a perception stack capable of handling novel objects via FoundationPose. The goal is a cell where introducing a new part type requires only a CAD model and a new policy, not a full reprogramming effort.
+
+---
+
+## Publications
+
+**Robotic Slip Mitigation** — Co-author, Nature Communications
+Research on detecting and mitigating slip in robotic grasping using tactile and force feedback. Demonstrated a closed-loop slip correction strategy applicable to in-hand manipulation tasks.
+
+---
+
+## Education
+
+- **MS Robotics** — University at Buffalo, State University of New York
+- **B.Tech** — Delhi Technological University (DTU)
+
+---
+
+## Links
+
+- **Portfolio**: https://ashutoshpanpalia.github.io
+- **All Projects**: https://ashutoshpanpalia.github.io/projects.html
+- **About**: https://ashutoshpanpalia.github.io/about.html
+- **GitHub**: https://github.com/ashutoshpanpalia
+- **LinkedIn**: https://linkedin.com/in/ashutoshpanpalia
+- **Email**: ashutoshpanpalia@gmail.com
+- **Resume**: https://ashutoshpanpalia.github.io/asset/Ash_resume.pdf
+
+---
+
+## Target Roles
+
+Ashutosh is actively seeking full-time Robotics Engineer positions focused on:
+- Robot manipulation and dexterous assembly
+- 6-DoF object pose estimation and perception pipelines
+- Sim-to-real transfer for manipulation and locomotion
+- Imitation learning and behavior cloning for robotic tasks
+- Real-world robot deployment in manufacturing or service contexts
+
+Target companies include but are not limited to: Honda Research Institute, Chef Robotics, Skild AI, Agility Robotics, Apptronik, Physical Intelligence (Pi), and similar organizations working on deployable robotic systems.
+
+---
+
+*Last updated: 2026-05-23*
