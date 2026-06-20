@@ -99,7 +99,7 @@
                     </h3>
 
                     <p class="project-description">
-                        Training a diffusion policy with ~50 episodes of data captured using Intel Realsense D405 camera in a UMI style data collection setup. The model has not learned it yet but the complete pipeline is ready from raw data to policy deployment. More data could solve the problem.
+                        Built an end-to-end manipulation imitation-learning pipeline using UMI-style data collection with an Intel RealSense D405 through to diffusion policy training and deployment. Captured ~50 episodes and stood the full data → policy → robot pipeline up; the policy has not converged on the task yet, with additional demonstration data being the most likely next step.
                         <br><br>
                         ▶ <a href="https://youtube.com/shorts/pesn5jSfoxs?feature=share" 
                             target="_blank" 
@@ -119,14 +119,14 @@
             </div>
 
             <!-- Foundation Pose -->
-            <div class="project-card">
+            <div class="project-card" id="foundation-pose">
                 <div class="project-image" onclick="openModal('asset/gifs/2026/foundation_pose_and_pd_velocity_control.mp4')">
                     <video src="asset/gifs/2026/foundation_pose_and_pd_velocity_control.mp4" autoplay muted loop playsinline></video>
                 </div>
                 <div class="project-content">
                     <h3 class="project-title">6DoF Object Pose Estimation with FoundationPose (NVIDIA)</h3>
                     <p class="project-description">
-                        Implemented NVIDIA's FoundationPose for model-based 6DoF pose estimation of CAD objects using an Intel RealSense D405 camera. Integrated the pose output with a PD velocity controller on a Ufactory robot arm to enable pose-driven manipulation — tracking object position and orientation in real time to guide end-effector control.
+                        Integrated NVIDIA's FoundationPose into a manipulation control loop. Model-based 6DoF pose tracking of CAD objects from an Intel RealSense D405 feeds a PD velocity controller on a Ufactory arm, closing the loop between perception and end-effector motion in real time.
                     </p>
                     <div class="project-tags">
                         <span class="tag">FoundationPose</span>
@@ -148,7 +148,7 @@
                 <div class="project-content">
                     <h3 class="project-title">Synthetic vs Real vs Hybrid Datasets for CAD Object Detection (SyncMfg)</h3>
                     <p class="project-description">
-                        Conducted a systematic comparative study on dataset composition for manufacturing object detection. Generated fully synthetic training data in Blender (varied backgrounds and materials) and compared it against a 100% real image dataset and hybrid mixes at 2%, 5%, 10%, 15%, 25%, and 50% real data ratios. Key finding: a 5% hybrid dataset achieves optimal detection performance — minimizing annotation cost while retaining real-world robustness for CAD-model-based industrial object detection.
+                        Designed a synthetic-data perception pipeline for CAD-based industrial object detection and ran a systematic comparison of dataset composition. Generated fully synthetic training images in Blender (varied backgrounds and materials) and benchmarked against a 100% real dataset and hybrid mixes at 2%, 5%, 10%, 15%, 25%, and 50% real ratios. Finding: a 5% hybrid mix achieves the best detection performance, minimizing annotation cost while preserving real-world robustness.
                     </p>
                     <div class="project-tags">
                         <span class="tag">Synthetic Data</span>
@@ -164,14 +164,14 @@
             </div>
 
             <!-- Visual Servoing -->
-            <div class="project-card">
+            <div class="project-card" id="visual-servoing">
                 <div class="project-image" onclick="openModal('asset/gifs/2026/visual_servoing.mp4')">
                     <video src="asset/gifs/2026/visual_servoing.mp4" autoplay muted loop playsinline></video>
                 </div>
                 <div class="project-content">
                     <h3 class="project-title">Visual Servoing with Ufactory Arm and AprilTag Tracking</h3>
                     <p class="project-description">
-                        Implemented image-based visual servoing on a Ufactory robot arm with an Intel RealSense D405 camera mounted on the end-effector. Used AprilTag detection as the visual feature source and a velocity controller to continuously minimize pose error between the detected tag and the target frame — enabling closed-loop, camera-guided manipulation without predefined trajectories.
+                        Built a closed-loop, image-based visual servoing controller on a Ufactory arm with an eye-in-hand Intel RealSense D405. AprilTag detections supply the visual feature error and a velocity controller continuously drives the end-effector to null the pose error against the target frame, achieving camera-guided manipulation with no predefined trajectory.
                     </p>
                     <div class="project-tags">
                         <span class="tag">Visual Servoing</span>
@@ -256,7 +256,7 @@
                 <div class="project-content">
                     <h3 class="project-title">Linear Slip Mitigation in Robotic Manipulation</h3>
                     <p class="project-description">
-                        Co-authored a peer-reviewed Nature Communications study addressing linear slip during robotic grasping and manipulation. Contributed to algorithmic development and experimental validation demonstrating robust slip-aware control strategies under real-world contact uncertainties.
+                        Co-authored a peer-reviewed Nature Communications study on linear slip during robotic grasping, a contact-control problem at the heart of dexterous manipulation. Contributed to algorithmic development and experimental validation of slip-aware control strategies under real-world contact uncertainty.
                     </p>
                     <div class="project-tags">
                         <span class="tag">Robot Manipulation</span>
@@ -277,7 +277,7 @@
                 <div class="project-content">
                     <h3 class="project-title">Rotational Slip Detection and Mitigation for Robot Arms</h3>
                     <p class="project-description">
-                        Investigated rotational slip phenomena in robotic manipulation and contributed to control strategies that detect and mitigate object rotation during grasping. Demonstrated improved manipulation stability through experimental evaluation on robotic arms.
+                        Extended slip-aware manipulation to the rotational case. Contributed to detection and control strategies that identify unintended object rotation during grasping and react to maintain stable in-hand pose. Validated experimentally on robotic arms.
                     </p>
                     <div class="project-tags">
                         <span class="tag">Robotic Grasping</span>
@@ -297,7 +297,7 @@
                 <div class="project-content">
                     <h3 class="project-title">3D Citrus Fruit Detection and Size Estimation</h3>
                     <p class="project-description">
-                        Developed a multi-modal perception pipeline for agricultural robotics to detect, count, and estimate the size of citrus fruits using stereo vision. Combined custom-trained YOLO models with SAM-based segmentation and point cloud geometry for 3D localization, ripeness analysis, and GPS-tagged mapping.
+                        Built a multi-stage perception pipeline for agricultural robotics: a custom-trained YOLO detector feeds Segment Anything (SAM) masks, which are fused with stereo point clouds to localize, count, and size citrus fruits in 3D, combined with ripeness analysis and GPS-tagged mapping for grove-scale inventory.
                     </p>
                     <div class="project-tags">
                         <span class="tag">Computer Vision</span>
@@ -311,7 +311,7 @@
             </div>
 
             <!-- Project 6 -->
-            <div class="project-card">
+            <div class="project-card" id="trossen-arm">
                 <div class="project-image" onclick="openModal('asset/gifs/2025/trossen_arm_sim_2_real.gif')">
                     <img src="asset\gifs\2025\trossen_arm_sim_2_real.gif" alt="Trossen Arm RL">
 
@@ -319,7 +319,7 @@
                 <div class="project-content">
                     <h3 class="project-title">RL-Based Manipulator Control Without Analytical IK</h3>
                     <p class="project-description">
-                        Trained a reinforcement learning policy for a Trossen robotic arm in PyBullet to reach target positions without relying on analytical inverse kinematics. Progressed from PPO to SAC with randomized dynamics and external disturbances, and successfully deployed the learned policy in a sim-to-real setup.
+                        Replaced an analytical inverse-kinematics solver with a learned policy for end-effector reaching on a Trossen manipulator. Trained in PyBullet, progressing from PPO to SAC with domain randomization on dynamics and external disturbances, then deployed sim-to-real on the physical arm.
                     </p>
                     <div class="project-tags">
                         <span class="tag">Robot Manipulation</span>
@@ -339,7 +339,7 @@
 
                 </div>
                 <div class="project-content">
-                    <h3 class="project-title">Startup Judge — Startup Texas Pitch & SBIR/STTR Demo Day</h3>
+                    <h3 class="project-title">Startup Judge: Startup Texas Pitch & SBIR/STTR Demo Day</h3>
                     <p class="project-description">
                         Served as a startup judge for the Startup Texas Emerging Industries Pitch Competition and SBIR/STTR Demo Day in Brownsville, Texas. Evaluated early-stage deep-tech startups and participated in the allocation of approximately $100K in funding across multiple industry sectors as part of community outreach and innovation support.
                     </p>
@@ -488,7 +488,7 @@
                     <img src="asset\gifs\2024\ub_startup_challenge.gif" alt="Panasci Startup Competition">
                 </div>
                 <div class="project-content">
-                    <h3 class="project-title">Startup Competition Participant — Panasci (UB)</h3>
+                    <h3 class="project-title">Startup Competition Participant: Panasci (UB)</h3>
                     <p class="project-description">
                         Participated in the Panasci Startup Competition at the University at Buffalo, clearing two evaluation rounds. Presented technology ideas to a panel of judges, demonstrating early-stage innovation and entrepreneurial engagement.
                     </p>
@@ -526,7 +526,7 @@
                 <div class="project-content">
                     <h3 class="project-title">System Identification on FANUC Industrial Robot (IIT Kanpur)</h3>
                     <p class="project-description">
-                        Conducted a research internship at IIT Kanpur focused on system identification of a FANUC industrial robotic arm. Designed and executed vibration-based experiments, collected displacement-time data, and applied FFT-based modal analysis to identify dominant system dynamics and resonance characteristics.
+                        Research internship at IIT Kanpur on kinematic and dynamic characterization of a FANUC industrial manipulator. Designed vibration-based excitation experiments, collected displacement-time data on the arm, and applied FFT-based modal analysis to extract dominant system dynamics and resonance modes, foundational data for accurate manipulator control.
                     </p>
                     <div class="project-tags">
                         <span class="tag">Industrial Robotics</span>
@@ -546,7 +546,7 @@
 
                 </div>
                 <div class="project-content">
-                    <h3 class="project-title">Manufacturing Quality Improvement Award — Hero MotoCorp</h3>
+                    <h3 class="project-title">Manufacturing Quality Improvement Award: Hero MotoCorp</h3>
                     <p class="project-description">
                         Received an award at Hero MotoCorp two-wheeler manufacturing facility for contributing to manufacturing quality improvement initiatives. Supported the introduction of automated inspection tools and process enhancements to improve defect detection and production consistency.
                     </p>
@@ -589,7 +589,7 @@
                 <div class="project-content">
                     <h3 class="project-title">Modular Robotic Arm for Mars Rover (5-DOF)</h3>
                     <p class="project-description">
-                        Designed and built a 5-DOF modular robotic arm for a Mars rover prototype with a lifting capacity of 3 kg. Implemented inverse kinematics–based control with a closed-loop feedback system using multi-turn potentiometers for absolute joint position sensing.
+                        Designed, built, and controlled a 5-DOF modular robotic arm (3 kg payload) for a Mars rover prototype. Implemented inverse-kinematics-based joint control closed around absolute joint-position feedback from multi-turn potentiometers, an early hands-on grounding in manipulator kinematics and closed-loop control.
                     </p>
                     <div class="project-tags">
                         <span class="tag">Robotic Manipulation</span>

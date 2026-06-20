@@ -2,7 +2,7 @@
 
 ## Summary
 
-Ashutosh Panpalia is a robotics engineer with approximately four years of combined experience in robotics and adjacent automation domains, currently employed as a Robotics Engineer at ZOHO Corporation in McAllen, TX. He holds an MS in Robotics from the University at Buffalo and a B.Tech from Delhi Technological University (DTU). His core expertise spans robot manipulation with 6-DoF pose estimation, sim-to-real policy transfer for both manipulation and locomotion, imitation learning via diffusion policy, and production-ready modular software architectures for robotic systems. He is a co-author on a Nature Communications publication on robotic slip mitigation and is actively seeking Robotics Engineer roles focused on manipulation, perception, and real-world deployment at companies working on advanced robotic systems.
+Ashutosh Panpalia is a robotics engineer with 5+ years of combined experience in robotics and adjacent automation domains, currently employed as a Robotics Software Engineer at ZOHO Corporation in McAllen, TX. He is open to relocation within the US and holds work authorization via H1B starting October 2026. He holds an MS in Robotics from the University at Buffalo and a B.Tech from Delhi Technological University (DTU). His core expertise spans robot manipulation with 6-DoF pose estimation, sim-to-real policy transfer for both manipulation and locomotion, imitation learning via diffusion policy, and production-ready modular software architectures for robotic systems. He is a co-author on a Nature Communications publication on robotic slip mitigation and is actively seeking Robotics Engineer roles focused on manipulation, perception, and real-world deployment at companies working on advanced robotic systems.
 
 ---
 
@@ -121,4 +121,4 @@ Target companies include but are not limited to: Honda Research Institute, Chef 
 
 ---
 
-*Last updated: 2026-05-23*
+*Last updated: 2026-06-19*

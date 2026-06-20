@@ -3,9 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Robotics Engineer">
+    <meta name="description" content="Robotics Software Engineer specializing in Manipulation, Kinematics, and Visual Servoing">
     <meta name="google-site-verification" content="AlhqxXhgwTe2LF55ECnDNBTDbaZmBt4qsi8VGlqDYcY" />
-    <title>ASH | Robotics Engineer</title>
+
+    <!-- Open Graph (LinkedIn / Slack / Discord / Facebook link previews) -->
+    <meta property="og:type" content="profile">
+    <meta property="og:site_name" content="Ashutosh Panpalia | Robotics Software Engineer">
+    <meta property="og:title" content="Ashutosh Panpalia, Robotics Software Engineer (Manipulation)">
+    <meta property="og:description" content="Robotics Software Engineer specializing in Manipulation, Kinematics, and Visual Servoing. McAllen, TX · Open to Relocation.">
+    <meta property="og:url" content="https://ashutoshpanpalia.github.io/">
+    <meta property="og:image" content="https://ashutoshpanpalia.github.io/asset/profile.JPG">
+    <meta property="og:image:width" content="360">
+    <meta property="og:image:height" content="420">
+    <meta property="og:image:alt" content="Photo of Ashutosh Panpalia">
+    <meta property="profile:first_name" content="Ashutosh">
+    <meta property="profile:last_name" content="Panpalia">
+
+    <title>ASH | Robotics Software Engineer</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -55,8 +69,9 @@
                     <span class="name-char">Ashutosh 'Ash' </span>
                     <span class="name-char">Panpalia</span>
                 </h1>
+                <p class="hero-tagline">Robotics Software Engineer · Manipulation</p>
                 <p class="hero-description">
-                    4+ years experience || Robotics Engineer at ZOHO @ Texas || MS Robotics @ University at Buffalo || Ex-Hero MotoCorp Ltd. || IIT Kanpur || DTU(DCE)
+                    5+ years experience || Robotics Software Engineer at ZOHO @ Texas || MS Robotics @ University at Buffalo || Ex-Hero MotoCorp Ltd. || IIT Kanpur || DTU(DCE)
                 </p>
                 <div class="hero-buttons">
                     <a href="projects.html" class="btn btn-primary">
@@ -72,6 +87,11 @@
                         </svg>
                         <span>Download Resume</span>
                     </a>
+                </div>
+                <div class="hero-meta">
+                    <span class="tag">McAllen, TX</span>
+                    <span class="tag tag--accent">Open to Relocation</span>
+                    <span class="tag">H1B (starting Oct 2026)</span>
                 </div>
             </div>
         </div>
@@ -140,6 +160,18 @@
         <div class="tech-item"><span>SLAM</span></div>
         <div class="tech-item"><span>RViz</span></div>
         <div class="tech-item"><span>PyBullet</span></div>
+        <div class="tech-item"><span>MoveIt2</span></div>
+        <div class="tech-item"><span>URDF</span></div>
+        <div class="tech-item"><span>USD</span></div>
+        <div class="tech-item"><span>Visual Servoing</span></div>
+        <div class="tech-item"><span>6DoF Pose Estimation</span></div>
+        <div class="tech-item"><span>Sim-to-Real</span></div>
+        <div class="tech-item"><span>Reinforcement Learning</span></div>
+        <div class="tech-item"><span>Imitation Learning / Diffusion Policy</span></div>
+        <div class="tech-item"><span>YOLO</span></div>
+        <div class="tech-item"><span>Segment Anything (SAM)</span></div>
+        <div class="tech-item"><span>Open3D</span></div>
+        <div class="tech-item"><span>Intel RealSense</span></div>
         <div class="tech-item"><span>Stereo Cameras</span></div>
         <div class="tech-item"><span>LiDAR</span></div>
         <div class="tech-item"><span>IMU</span></div>
@@ -161,53 +193,53 @@
                 <span class="title-line"></span>
             </h2>
             <div class="projects-preview-grid">
-                <a href="projects.html#unitree-dog" class="preview-card">
+                <a href="projects.html#visual-servoing" class="preview-card">
                     <div class="preview-image">
-                        <img src="asset/gifs/2025/unitree_go2_after_training.gif" alt="Unitree Dog">
+                        <video src="asset/gifs/2026/visual_servoing.mp4" autoplay muted loop playsinline></video>
                         <div class="preview-overlay">
                             <span class="view-project">View Project →</span>
                         </div>
                     </div>
                     <div class="preview-info">
-                        <h3>Unitree Dog Training</h3>
-                        <p>Quadruped locomotion with Isaac Lab</p>
+                        <h3>Visual Servoing: Ufactory + AprilTag</h3>
+                        <p>Closed-loop, image-based servoing with eye-in-hand RealSense D405</p>
                         <div class="preview-tags">
-                            <span>Isaac Lab</span>
-                            <span>RL</span>
+                            <span>Visual Servoing</span>
+                            <span>Manipulation</span>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="projects.html#foundation-pose" class="preview-card">
+                    <div class="preview-image">
+                        <video src="asset/gifs/2026/foundation_pose_and_pd_velocity_control.mp4" autoplay muted loop playsinline></video>
+                        <div class="preview-overlay">
+                            <span class="view-project">View Project →</span>
+                        </div>
+                    </div>
+                    <div class="preview-info">
+                        <h3>6DoF Pose Estimation: FoundationPose</h3>
+                        <p>Model-based 6DoF tracking driving a PD velocity controller</p>
+                        <div class="preview-tags">
+                            <span>Pose Estimation</span>
+                            <span>Manipulation</span>
                         </div>
                     </div>
                 </a>
 
                 <a href="projects.html#trossen-arm" class="preview-card">
                     <div class="preview-image">
-                        <img src="asset/gifs/2025/trossen_arm_sim_2_real.gif" alt="Trossen Arm">
+                        <img src="asset/gifs/2025/trossen_arm_sim_2_real.gif" alt="Trossen Arm Sim-to-Real">
                         <div class="preview-overlay">
                             <span class="view-project">View Project →</span>
                         </div>
                     </div>
                     <div class="preview-info">
-                        <h3>Sim-to-Real Transfer</h3>
-                        <p>PyBullet to physical robot arm</p>
+                        <h3>Sim-to-Real Manipulator Control</h3>
+                        <p>PyBullet → physical Trossen arm; PPO/SAC, no analytical IK</p>
                         <div class="preview-tags">
                             <span>Sim-to-Real</span>
-                            <span>Manipulation</span>
-                        </div>
-                    </div>
-                </a>
-
-                <a href="projects.html#citrus-cv" class="preview-card">
-                    <div class="preview-image">
-                        <img src="asset/gifs/2025/citrus_detection_plu_segmentation_model.gif" alt="Citrus CV">
-                        <div class="preview-overlay">
-                            <span class="view-project">View Project →</span>
-                        </div>
-                    </div>
-                    <div class="preview-info">
-                        <h3>Citrus Detection</h3>
-                        <p>YOLO-based fruit recognition and size estimation</p>
-                        <div class="preview-tags">
-                            <span>Computer Vision</span>
-                            <span>YOLO</span>
+                            <span>RL Control</span>
                         </div>
                     </div>
                 </a>

@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(where python *)",
+      "Bash(where node *)",
+      "Bash(where npx *)",
+      "Bash(where playwright *)",
+      "Bash(where chrome *)"
+    ]
+  }
+}
