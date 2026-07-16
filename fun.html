@@ -49,6 +49,25 @@
             <div class="projects-grid">
 
                 <div class="project-card">
+                    <div class="project-image" onclick="openModal('asset/gifs/mini_projects/cuRobo_demo.mp4')">
+                        <video src="asset/gifs/mini_projects/cuRobo_demo.mp4" autoplay muted loop playsinline></video>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">cuRobo GPU-Accelerated Motion Planning</h3>
+                        <p class="project-description">
+                            Worked through NVIDIA's cuRobo motion-generation stack end to end — forward and inverse kinematics, collision-free motion planning, and reactive MPC control. Fed live 3D data from an Intel RealSense camera into cuRobo's volumetric (voxel) world model so the MPC planner could dynamically avoid real obstacles as they appeared. Swapped the tutorial's Franka Panda for a simulated Trossen ViperX 300s arm via its URDF, exercising the pipeline on a different robot to explore the latest GPU-accelerated robotics stack.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">cuRobo</span>
+                            <span class="tag">Motion Planning</span>
+                            <span class="tag">MPC</span>
+                            <span class="tag">RealSense</span>
+                            <span class="tag">Trossen ViperX 300s</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
                     <div class="project-image" onclick="openModal('asset/gifs/mini_projects/orb_slam_demo.mp4')">
                         <video src="asset/gifs/mini_projects/orb_slam_demo.mp4" autoplay muted loop playsinline></video>
                     </div>
